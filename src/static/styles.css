@@ -99,15 +99,66 @@ section h3 {
 .participant-list {
   display: grid;
   gap: 6px;
-  padding-left: 20px;
-  color: #3949ab;
+  padding-left: 0;
+  list-style: none;
 }
 
 .participant-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   padding: 5px 8px;
   border-radius: 4px;
   background-color: #fff;
+  color: #3949ab;
+}
+
+.participant-list li span {
+  min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.delete-participant {
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  padding: 6px;
+  border: 1px solid #f0c9c6;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #b42318;
+}
+
+.delete-participant:hover {
+  border-color: #e7a6a1;
+  background-color: #fff1f0;
+  color: #8f1d14;
+}
+
+.delete-participant:focus-visible {
+  outline: 2px solid #3949ab;
+  outline-offset: 2px;
+}
+
+.delete-participant:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.delete-participant svg {
+  width: 18px;
+  height: 18px;
+}
+
+.delete-participant svg path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .participants-empty {
